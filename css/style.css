@@ -19,17 +19,21 @@ img{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-.temp {
+/* 
+.temperature {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+#currentTemperature {
+text-align: center;
 }
 
-#currentTemp {
-text-align: center;
-padding-left: 10px;
-
+.data {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h2 {
@@ -42,6 +46,7 @@ h2 {
 span {
   font-size: 5vh;
   font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
 }
 
 h1 {
@@ -49,6 +54,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   margin-top: 0px;
   margin-bottom: 50px;
+  font-weight: ;
 }
 
 header {

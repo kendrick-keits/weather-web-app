@@ -9,14 +9,64 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+
         console.log(data)
-        let temp = data.main.temp
-        msg = `Temperature is: ${temp}`
-        const curTemp = document.createElement('span')
-              curTemp.textContent = data.main.temp
-              document.getElementById('currentTemp').innerHTML = ""
-              curTemp.setAttribute('id','currentTemp')
-              document.getElementById('currentTemp').textContent = data.main.temp
+        
+        
+        const curTemperature = document.createElement('span')
+              curTemperature.textContent = data.main.temp
+              document.getElementById('currentTemperature').innerHTML = ""
+              curTemperature.setAttribute('id','currentTemperature')
+              document.getElementById('currentTemperature').textContent = data.main.temp
+
+              let result = data.weather
+
+              let description = result[0]
+
+              console.log(description.description)
+
+        const curDescription = document.createElement('span')
+              curDescription.textContent = description.description
+              document.getElementById('currentDescription').innerHTML = ""
+              curDescription.setAttribute('id','currentDescription')
+              document.getElementById('currentDescription').textContent = description.description
+
+              let result01 = data.weather
+
+              let icon = result01[0]
+
+              let iconAdd = icon.icon
+
+              let iconUrl = `http://openweathermap.org/img/w/${iconAdd}.png`
+
+              console.log(iconUrl)
+
+              document.getElementById('img').src = iconUrl;
+
+
+              
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                /*    const curTemperature = document.createElement('span')
+              curTemperature.textContent = data.weather.description
+              document.getElementById('currentDescription').innerHTML = ""
+              curTemperature.setAttribute('id','currentDescription')
+              document.getElementById('currentDescription').textContent = data.main.temp */
       })
       .catch(err => {
           console.log(`error ${err}`)
