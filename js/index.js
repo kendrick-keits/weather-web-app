@@ -4,7 +4,7 @@ document.querySelector('button').addEventListener('click', getFetch)
 function getFetch(){
   //const choice = document.querySelector('input').value
   const city = document.querySelector('input').value
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b0ac6be1b4affbcc156eee94fc09ec6c&units=imperial`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b0ac6be1b4affbcc156eee94fc09ec6c&units=imperial`
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
